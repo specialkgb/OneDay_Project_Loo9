@@ -104,8 +104,8 @@ article a:hover {
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach items="${PRO_LIST}" var="ProVO">
-					<tr class="pro_item" data-pcode="${VO.io_pcode}">
+				<c:forEach items="${PRO_LIST}" var="VO">
+					<tr class="pro_list" data-pcode="${VO.io_pcode}">
 						<td>${VO.io_pcode}</td>
 						<td>${VO.io_pname}</td>
 						<td>${VO.p_iprice}</td>
