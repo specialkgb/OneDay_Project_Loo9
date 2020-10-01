@@ -9,6 +9,9 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <title>매입매출리스트 프로젝트</title>
 <script src='https://code.jquery.com/jquery-latest.min.js'></script>
+<script>
+	var rootPath="${rootPath}"
+</script>
 <script src="https://kit.fontawesome.com/3c990466ed.js"
 	crossorigin="anonymous"></script>
 <style>

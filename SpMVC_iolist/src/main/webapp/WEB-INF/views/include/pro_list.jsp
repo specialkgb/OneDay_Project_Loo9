@@ -2,6 +2,7 @@
          pageEncoding="UTF-8" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:set var="rootPath" value="${pageContext.request.contextPath}"/>
+<script src="${rootPath}/static/js/pro_list.js?ver=001"></script>
 <div id="main_div">
     <h1></h1>
 </div>
@@ -30,7 +31,7 @@
 			</thead>
 			<tbody>
 				<c:forEach items="${PRO_LIST}" var="VO" varStatus="i">
-				<tr>
+				<tr class="proitems" data-seq="${VO.io_seq}">
 					<td>${i.count}</td>
 					<td>${VO.io_date}</td>
 					<td>${VO.io_time}</td>
@@ -46,11 +47,11 @@
 					<td>${VO.io_oprice_sum}</td>
 					<td><a href="${rootPath}/detail?seq=${VO.io_seq}">상세정보</a></td>
 					
-               			
-                    
 				</tr>
-					
 				</c:forEach>
+				<tr>
+					<
+				</tr>
 
 			</tbody>
 		</table>
