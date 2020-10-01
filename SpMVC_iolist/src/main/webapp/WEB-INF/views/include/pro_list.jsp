@@ -19,12 +19,12 @@
 					<th>수량</th>
 					
 					<th>매입합계</th>
-					<th>총매입계</th>
+					
 					
 					<th>매출합계</th>					
-					<th>총매출계</th>
 					
-					<th>비고</th>
+					
+					
 					
 					
 				</tr>
@@ -40,18 +40,21 @@
 					<td>${VO.io_price}</td>
 					<td>${VO.io_quan}</td>
 					
-					<td>${VO.io_iprice}</td>
-					<td>${VO.io_iprice_sum}</td>
-					
+					<td>${VO.io_iprice}</td>					
 					<td>${VO.io_oprice}</td>
-					<td>${VO.io_oprice_sum}</td>
-					<td><a href="${rootPath}/detail?seq=${VO.io_seq}">상세정보</a></td>
+				<c:if test="${i.last}">
+					<tr>
+						<td colspan=6>합계</td>
+						<td>${VO.io_iprice_sum }</td>
+						<td>${VO.io_oprice_sum }</td>
+					</tr>	
+				</c:if>
+											
 					
 				</tr>
 				</c:forEach>
-				<tr>
-					<
-				</tr>
+				
+				
 
 			</tbody>
 		</table>

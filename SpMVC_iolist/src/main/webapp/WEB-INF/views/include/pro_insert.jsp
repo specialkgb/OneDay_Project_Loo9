@@ -9,9 +9,7 @@
 		input_btn.addEventListener("click", function() {
 			document.querySelector("form").submit();
 		})
-	})
-	
-	
+	})	
 </script>
 <section id="insert_body">
 	<form method="post" action="${rootPath}${URL}">
