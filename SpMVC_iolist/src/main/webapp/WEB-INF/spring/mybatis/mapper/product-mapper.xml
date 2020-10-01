@@ -6,39 +6,52 @@
  <mapper namespace="com.biz.iolist.persistence.ProductDAO">
  	
  	<select id="selectAll" resultType="ProVO">
- 		SELECT * FROM tbl_iolist
+ 		SELECT * FROM tbl_iolist ORDER by io_date, io_time
  	</select>
  	
- 	<select id="findById" resultType="ProVO">
- 		SELECT * FROM tbl_iolist WHERE io_pcode = #{io_pcode}
+ 	<select id="findBySeq" resultType="ProVO">
+ 		SELECT * FROM tbl_iolist WHERE io_seq = #{io_seq}
  	</select>
  	
  	<insert id="insert">
  		INSERT INTO tbl_iolist (	
-		 	io_pcode,
+		 	io_seq,
 			io_pname,
 			io_date,
 			io_time,
 			io_input,
-			io_iprice,
-			io_oprice,
+			io_price,
 			io_quan,
 			io_total	
-	 	
+				 	
 		) VALUES (
-	
-			#{io_pcode},
+			
+			seq_iolist.NEXTVAL,
 			#{io_pname},
 			#{io_date},
 			#{io_time},
 			#{io_input},
-			#{io_iprice},
-			#{io_oprice},
+			#{io_price},
 			#{io_quan},
 			#{io_total}
 	)
  	</insert>
+	<update id="update" parameterType="ProVO">
+	    UPDATE tbl_iolist SET
+	        io_date =	#{io_date},
+	        io_time =	#{io_time},
+	        io_pname =	#{io_pname},
+	        io_input =	#{io_input},
+	        io_price =	#{io_price},
+	        io_quan  =	#{io_quan},
+	        io_total =	#{io_total}
+	    WHERE io_seq =  #{io_seq}
+	</update>
  	
- 	<delete id="delete"></delete>
+ 	
+ 	<delete id="delete">
+ 		DELETE FROM tbl_iolist
+        WHERE io_seq = #{seq}
+ 	</delete>
  
  </mapper> 

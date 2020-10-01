@@ -13,18 +13,29 @@ import lombok.ToString;
 @NoArgsConstructor
 public class ProductVO {
 	
-	private int io_pcode;
+	private long io_seq;
+	
 	private String io_pname;
 	
 	private String io_date;
 	private String io_time;
 	
-	private String io_input;
+	private boolean io_input;
 	
-	private int io_iprice;
-	private int io_oprice;
+	private int io_price;
 	private int io_quan;
 	private int io_total;
+	
+	private int io_iprice;       
+	private int io_oprice;       
+    
+
+    private int io_iprice_sum;       
+    private int io_oprice_sum;       
+    
+	
+	
+	
 
 
 }

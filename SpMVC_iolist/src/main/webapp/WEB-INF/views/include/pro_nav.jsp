@@ -78,7 +78,7 @@ div.toggle {
 			var text = $(this).text();
 			
 			if(text == "관리자모드") {
-				document.location.href= "${rootPath}/product/"
+				document.location.href= "${rootPath}/admin/"
 			} else if(text == "Home") {
 				document.location.href= "${rootPath}/"
 			} else if(text == "로그아웃") {
@@ -99,7 +99,7 @@ div.toggle {
 	</div>
 	<ul>
 		<li>Home</li>
-		<li>거래정보</li>
+		<li>관리자모드</li>
 		<li>회원가입</li>
 		<li>로그인</li>
 		<li>로그아웃</li>

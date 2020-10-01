@@ -1,10 +1,23 @@
 package com.biz.iolist.service;
 
+import java.util.List;
+
 import com.biz.iolist.model.ProductVO;
 
-public interface ProductService extends GenericService<ProductVO, String> {
+public interface ProductService {
 
-	ProductVO findById(String io_pcode);
+	public List<ProductVO> selectAll();
+	
+	public ProductVO findBySeq(long seq);
+	
+	public int insert(ProductVO vo);
+	
+	public int update(ProductVO vo);
+	
+	public int delete(long seq);
+	
+
+
 	
 
 }

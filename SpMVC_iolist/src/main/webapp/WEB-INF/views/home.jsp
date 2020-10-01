@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<title>나의 홈페이지</title>
+<title>매입매출리스트 프로젝트</title>
 <script src='https://code.jquery.com/jquery-latest.min.js'></script>
 <script src="https://kit.fontawesome.com/3c990466ed.js"
 	crossorigin="anonymous"></script>
@@ -88,36 +88,26 @@ article a:hover {
 </head>
 <body>
 	<header>
-		<h3>거누네 샤핑몰</h3>
-		<p>거누 패+숀</p>
+		<h3>하나도 모르겠어 진짜</h3>
 	</header>
-	<%@ include file="/WEB-INF/views/include/i-nav.jspf"%>
-	<section>
-		<table>
-			<thead>
-				<tr>
-					<th>상품코드</th>
-					<th>상품이름</th>
-					<th>매입가격</th>
-					<th>판매가격</th>
-					<th>판매수량</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach items="${PRO_LIST}" var="VO">
-					<tr class="pro_list" data-pcode="${VO.io_pcode}">
-						<td>${VO.io_pcode}</td>
-						<td>${VO.io_pname}</td>
-						<td>${VO.p_iprice}</td>
-						<td>${VO.p_oprice}</td>
-					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
-		<article>
-			<a href="${rootPath}/product/insert">상품추가</a>
-		</article>
-	</section>
+		<%@ include file="/WEB-INF/views/include/pro_nav.jsp"%>
+		
+		<section>
+		<c:choose>
+			<c:when test="${BODY == 'PRO_HOME'}">
+				<%@ include file="/WEB-INF/views/include/pro_list.jsp" %>
+			</c:when>
+			<c:when test="${BODY == 'PRO_INSERT'}">
+				<%@ include file="/WEB-INF/views/include/pro_insert.jsp" %>
+			</c:when>
+			<c:when test="${BODY == 'PRO_DETAIL'}">
+				<%@ include file="/WEB-INF/views/include/pro_detail.jsp" %>
+			</c:when>
+			<c:otherwise>
+				<%@ include file="/WEB-INF/views/include/pro_list.jsp" %>
+			</c:otherwise>
+		</c:choose>
+		</section>
 
 </body>
 </html>
