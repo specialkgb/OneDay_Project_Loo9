@@ -17,20 +17,20 @@
 		<input id="io_pname" name="io_pname" type="text"
 			placeholder="상품명을 입력하세요" value="${ProductVO.io_pname}"> <br />
 
-		<h1>매입/매출 선택</h1>
-			<input type='radio' name="radio" id="radio1" value="0"><label for="radio1">매입</label>
+		<h2>매입/매출 선택</h2>
+			<input id="radio1" type='radio' name="io_input" value=false checked="checked">
+			<label for="radio1">매입 </label>
 			
-
-
-			<input type='radio' name="radio" id="radio2" value="1"><label for="radio2">매출</label>
+			<input id="radio2" type='radio' name="io_input" value=true>
+			<label for="radio2">매출</label>
 			
 		<br />
 
-		<h1>가격</h1>
+		<h2>가격</h2>
 		<input id="io_price" name="io_price" type="number"
 			placeholder="얼마에 사시겠어요?" value="${ProductVO.io_price}"> <br />
 
-		<h1>수량</h1>
+		<h2>수량</h2>
 		<input id="io_quan" name="io_quan" type="number"
 			placeholder="수량은 얼마인가요?" value="${ProductVO.io_quan}">
 		<hr />
