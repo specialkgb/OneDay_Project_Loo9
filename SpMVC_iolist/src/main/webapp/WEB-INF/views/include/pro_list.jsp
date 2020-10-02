@@ -18,15 +18,8 @@
 					<th>단가</th>
 					<th>수량</th>
 					
-					<th>매입합계</th>
-					
-					
+					<th>매입합계</th>					
 					<th>매출합계</th>					
-					
-					
-					
-					
-					
 				</tr>
 			</thead>
 			<tbody>
@@ -49,13 +42,8 @@
 						<td>${VO.io_oprice_sum }</td>
 					</tr>	
 				</c:if>
-											
-					
 				</tr>
 				</c:forEach>
-				
-				
-
 			</tbody>
 		</table>
 		<article>

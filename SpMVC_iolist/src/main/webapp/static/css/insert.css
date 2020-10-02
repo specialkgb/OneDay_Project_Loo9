@@ -8,7 +8,5 @@
 
 #insert_body h2 {
     height: auto; /* 높이 초기화 */
-    line-height: normal; /* line-height 초기화 */
-    font-family: inherit; /* 폰트 상속 */
     padding: 0; /* 여백과 높이 결정 */
 }
